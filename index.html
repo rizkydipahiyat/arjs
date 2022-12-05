@@ -25,5 +25,21 @@
     </a-scene>
     <script type="text/javascript" src="particles.js"></script>
     <script type="text/javascript" src="app.js"></script>
+      <script>
+      function getLocalStream() {
+      navigator.mediaDevices
+        .getUserMedia({ video: false, audio: true })
+        .then((stream) => {
+          window.localStream = stream;
+          window.localAudio.srcObject = stream;
+          window.localAudio.autoplay = true;
+        })
+        .catch((err) => {
+          console.error(`you got an error: ${err}`);
+        });
+    }
+
+    getLocalStream();
+    </script>
   </body>
 </html>
