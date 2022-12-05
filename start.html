@@ -3,14 +3,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <audio autoplay>
+    <audio autoplay id="myAudio">
       <source src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889" type="audio/mp3" />
     </audio>
-     <audio src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889" id="my_audio" loop="loop"></audio>
-    <script type="text/javascript">
-      window.onload=function(){
-        document.getElementById("my_audio").play();
-      }
+    <button onclick="playAudio()" type="button">Play Audio</button>
+    <script src="text/javascript">
+      var x = document.getElementById("myAudio"); 
+      function playAudio() { 
+        x.play(); 
+      } 
     </script>
   </body>
 </html>
