@@ -9,6 +9,9 @@
   </head>
   <body>
     <div id="snow-fall"></div>
+    <audio id="my_audio" src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889" loop autoplay>
+<!--          <source id="my_audio" src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889" loop autoplay type="audio/mp3" /> -->
+    </audio>
     <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/targets.mind?v=1669987097165" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <a-asset-item id="birdModel" src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/ChristmasTree.glb?v=1669992442385"></a-asset-item>
@@ -20,9 +23,6 @@
         <a-gltf-model rotation="90 90 90 " position="0 0 0" scale="0.2 0.2 0.2" src="#birdModel" animation-mixer>
       </a-entity>
     </a-scene>
-      <audio >
-         <source id="my_audio" src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889" loop autoplay type="audio/mp3" />
-    </audio>
     <script type="text/javascript">
       window.onload=function(){
       document.getElementById("my_audio").play();
