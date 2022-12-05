@@ -1,17 +1,19 @@
+
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <audio autoplay >
-      <source id="myAudio" src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889" type="audio/mp3" />
-    </audio>
-    <button onclick="playAudio()" type="button">Play Audio</button>
-    <script>
-      var x = document.getElementById("myAudio"); 
-      function playAudio() { 
-        x.play(); 
-      } 
-    </script>
-  </body>
+<body>
+
+</body>
+<script>
+  var audio = new Audio('https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889');
+  var UserInteracted = setInterval(()=>{
+    audio.play()
+    .then(()=>{
+      clearInterval(UserInteracted);
+    })
+    .catch(()=>{
+      console.log("waiting for user interaction to play first notification")
+    });     
+  },1000)
+</script>
 </html>
