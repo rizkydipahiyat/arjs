@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="snow-fall"></div>
-    <audio autoplay>
+    <audio autoplay id="mySound">
       <source src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889" type="audio/mp3" />
     </audio>
     <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/targets.mind?v=1669987097165" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
@@ -25,20 +25,8 @@
     </a-scene>
     <script type="text/javascript" src="particles.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/soundmanager2/V2.97a.20170601/script/soundmanager2.js" integrity="sha512-biaNQ4rZ+kH3v/qdvKue/JC9ZWxL6FZB+D197yLKAnzfNix7kFrkgFIdJbIad+jSoV03MVP2tQDyQ8Cl+gs47A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-    // where to find flash SWFs, if needed...
-    soundManager.url = 'https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889';
-
-    soundManager.onready(function() {
-        soundManager.createSound({
-            id: 'mySound',
-            url: 'https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889'
-        });
-
-        // ...and play it
-        soundManager.play('mySound');
-    });
-</script>
+    setTimeout(() => {
+      document.getElementById('mySound').play();
+    }, 2000)
    </body>
 </html>
