@@ -25,21 +25,20 @@
     </a-scene>
     <script type="text/javascript" src="particles.js"></script>
     <script type="text/javascript" src="app.js"></script>
-      <script>
-      function getLocalStream() {
-      navigator.mediaDevices
-        .getUserMedia({ video: false, audio: true })
-        .then((stream) => {
-          window.localStream = stream;
-          window.localAudio.srcObject = stream;
-          window.localAudio.autoplay = true;
-        })
-        .catch((err) => {
-          console.error(`you got an error: ${err}`);
-        });
-    }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/soundmanager2/V2.97a.20170601/script/soundmanager2.js" integrity="sha512-biaNQ4rZ+kH3v/qdvKue/JC9ZWxL6FZB+D197yLKAnzfNix7kFrkgFIdJbIad+jSoV03MVP2tQDyQ8Cl+gs47A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    // where to find flash SWFs, if needed...
+    soundManager.url = 'https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889';
 
-    getLocalStream();
-    </script>
-  </body>
+    soundManager.onready(function() {
+        soundManager.createSound({
+            id: 'mySound',
+            url: 'https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889'
+        });
+
+        // ...and play it
+        soundManager.play('mySound');
+    });
+</script>
+   </body>
 </html>
