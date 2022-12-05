@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="snow-fall"></div>
-    <audio autoplay id="mySound">
+    <audio autoplay>
       <source src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889" type="audio/mp3" />
     </audio>
     <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/targets.mind?v=1669987097165" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
@@ -25,8 +25,10 @@
     </a-scene>
     <script type="text/javascript" src="particles.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    setTimeout(() => {
-      document.getElementById('mySound').play();
-    }, 2000)
+    var audio = new Audio('https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Christmasmp3.mp3?v=1670040912889');
+
+    function playSound(){
+        audio.play();
+    }
    </body>
 </html>
