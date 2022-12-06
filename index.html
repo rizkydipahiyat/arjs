@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="snow-fall"></div>
-    <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/targetsbaruprisma.mind?v=1670292239492; showStats: true; filterMinCF: 1; filterBeta: 10000; warmupTolerance: 0; missTolerance: 0" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/targetsbaruprisma.mind?v=1670292239492; showStats: true; filterMinCF: 1; filterBeta: 10000; warmupTolerance: 0; missTolerance: 0" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <img id="card" src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/Greeting%20Card-Belakang-2a.jpg?v=1670292373447" />
         <a-asset-item id="birdModel" src="https://cdn.glitch.global/bbe3a632-6215-4dfb-8a9d-3331f43617ff/ChristmasTree.glb?v=1669992442385"></a-asset-item>
@@ -19,7 +19,7 @@
 
       <a-entity mindar-image-target="targetIndex: 0">
         <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.05 0.05 0.05" src="#birdModel" animation-mixer>
+        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.1 0.1 0.1" src="#birdModel" animation-mixer>
       </a-entity>
     </a-scene>
     <script>
